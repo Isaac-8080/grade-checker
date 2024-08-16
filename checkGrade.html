@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- title -->
+    <title>GradeChecker</title>
+
+    <!-- google icons rounded -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- google icons outlined -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- style link -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryColor: '#F2F2F2',
+                        secondaryColor: '#111',
+                        accentColor: '#2ecc71',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="bg-secondaryColor">
+
+    <!-- main container -->
+    <div>
+        
+        <main>
+            
+            <div class="flex flex-col justify-center items-center h-[100dvh]">
+                
+                <p class="text-2xl md:text-4xl font-bold text-center text-[#F2F2F2] mt-3">Aggregate Checker</p>
+                
+                <div class="flex flex-col md:flex-row items-center md:justify-between gap-10 w-full h-[100dvh] p-5 md:px-[200px]">
+                    
+                    <div class="w-full" id="displayAggregate">
+                
+                        <div class="bg-primaryColor h-[70dvh] border rounded-md p-5">
+                
+                            <div id="providedInfo" class="flex flex-col gap-3 w-full md:w-fit hidden">
+
+                                <div id="listInfo" class="font-bold"></div>
+                                <div id="listEng"></div>
+                                <div id="listMath"></div>
+                                <div id="listSci"></div>
+                                <div id="listSoc"></div>
+                                <div id="listFirBest"></div>
+                                <div id="listSecBest"></div>
+                                <div id="result" class="font-bold"></div>
+                
+                            </div>
+
+                            <div id="hint">
+                                <p class="text-[red]">Please note: Numbers must be between 1 and 9, inclusive.</p>
+                                <p>1 = A1</p>
+                                <p>2 = B2</p>
+                                <p>3 = B3</p>
+                                <p>4 = C4</p>
+                                <p>5 = C5</p>
+                                <p>6 = C6</p>
+                                <p>7 = D7</p>
+                                <p>8 = E8</p>
+                                <p>9 = F8</p>
+                            </div>
+                
+                        </div>
+
+
+                
+                    </div>
+    
+                    <div class="w-full">
+                        
+                        <form action="" method="post">
+            
+                            <!-- error message -->
+                            <div id="error" class="border heading rounded border-0 text-[red]"></div>
+    
+                            <label for="english" class="uppercase md:text-[12px] pl-2 text-[#F2F2F2]">english</label>
+                            <input type="number" id="english" class="border rounded w-full bg-primaryColor mb-2 py-1 block px-5 outline-none focus-within:border-accentColor">
+    
+                            <label for="math" class="uppercase md:text-[12px] pl-2 text-[#F2F2F2]">mathematics</label>
+                            <input type="number" id="math" class="border rounded w-full bg-primaryColor mb-2 py-1 block px-5 outline-none focus-within:border-accentColor">
+    
+                            <label for="science" class="uppercase md:text-[12px] pl-2 text-[#F2F2F2]">science</label>
+                            <input type="number" id="science" class="border rounded w-full bg-primaryColor mb-2 py-1 block px-5 outline-none focus-within:border-accentColor">
+    
+                            <label for="social" class="uppercase md:text-[12px] pl-2 text-[#F2F2F2]">social</label>
+                            <input type="number" id="social" class="border rounded w-full bg-primaryColor mb-2 py-1 block px-5 outline-none focus-within:border-accentColor">
+    
+                            <label for="firstBest" class="uppercase md:text-[12px] pl-2 text-[#F2F2F2]">First best elective</label>
+                            <input type="number" id="firstBest" class="border rounded w-full bg-primaryColor mb-2 py-1 block px-5 outline-none focus-within:border-accentColor">
+    
+                            <label for="secondBest" class="uppercase md:text-[12px] pl-2 text-[#F2F2F2]">Second best elective</label>
+                            <input type="number" id="secondBest" class="border rounded w-full bg-primaryColor mb-2 py-1 block px-5 outline-none focus-within:border-accentColor">
+    
+                            <input type="button" value="Calculate Grade" id="calculateBtn" class="rounded-lg bg-primaryColor hover:bg-accentColor hover:text-[#F2F2F2] w-full py-2 mt-3 cursor-pointer">
+                    
+                        </form>
+    
+                    </div>
+    
+                </div>
+    
+
+            </div>
+            
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </div>
+
+    <script src="./script/checkGrade.js"></script>
+</body>
+</html>
