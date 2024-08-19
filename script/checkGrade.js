@@ -20,11 +20,13 @@ calculate.addEventListener('click', () => {
     
     if (getEnglish === 0 || getMath === 0 || getScience === 0 || getSocial === 0 || getFirstBest === 0 || getSecondBest === 0) {
         
-        document.querySelector('#error').textContent = `Numbers can't be 0 or below`;
+        document.querySelector('#error').textContent = `Invalid input. Please enter a number between 1 and 9 (inclusive)`;
+        // document.querySelector('#error').textContent = `Numbers can't be 0 or below`;
 
     } else if (getEnglish > 9 || getMath > 9 || getScience > 9 || getSocial > 9 || getFirstBest > 9 || getSecondBest > 9) {
         
-        document.querySelector('#error').textContent = `Numbers can't be 10 or above!`;
+        document.querySelector('#error').textContent = `Invalid input. Please enter a number between 1 and 9 (inclusive)`;
+        // document.querySelector('#error').textContent = `Numbers can't be 10 or above!`;
 
     } else if (!getEnglish || !getMath || !getScience || !getSocial || !getFirstBest || !getSecondBest){
         
@@ -36,7 +38,7 @@ calculate.addEventListener('click', () => {
         document.querySelector('#providedInfo').style.display = 'block';
 
         // hint
-        document.querySelector('#hint').style.display = 'none';
+        document.querySelector('#calcContainer').style.display = 'none';
 
         // getlistInfo
         document.querySelector('#listInfo').textContent = `Provided Information`;
@@ -68,3 +70,15 @@ calculate.addEventListener('click', () => {
 
 });
 
+// hides hint and displays calcMainContainer
+document.querySelector('#hintBtn').addEventListener('click', () => {
+    document.querySelector('#hint').style.display = 'none';
+    document.querySelector('#calcMainContainer').style.display = 'block';
+});
+
+
+// providedInfo hint and displays calcContainer
+document.querySelector('#providedInfo').addEventListener('click', () => {
+    document.querySelector('#providedInfo').style.display = 'none';
+    document.querySelector('#calcContainer').style.display = 'block';
+});
