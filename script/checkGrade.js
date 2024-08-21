@@ -18,7 +18,7 @@ calculate.addEventListener('click', () => {
     
     const results =  getEnglish + getMath + getScience + getSocial + getFirstBest + getSecondBest
     
-    if (getEnglish === 0 || getMath === 0 || getScience === 0 || getSocial === 0 || getFirstBest === 0 || getSecondBest === 0) {
+    if (getEnglish <= 0 || getMath <= 0 || getScience <= 0 || getSocial <= 0 || getFirstBest <= 0 || getSecondBest <= 0) {
         
         document.querySelector('#error').textContent = `Invalid input. Please enter a number between 1 and 9 (inclusive)`;
         // document.querySelector('#error').textContent = `Numbers can't be 0 or below`;
