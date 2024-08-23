@@ -77,7 +77,7 @@ document.querySelector('#hintBtn').addEventListener('click', () => {
 });
 
 
-// providedInfo hint and displays calcContainer
+// hides providedInfo hint and displays calcContainer
 document.querySelector('#providedInfo').addEventListener('click', () => {
     document.querySelector('#providedInfo').style.display = 'none';
     document.querySelector('#calcContainer').style.display = 'block';
